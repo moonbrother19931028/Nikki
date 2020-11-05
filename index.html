@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>未来日記</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="top">
+      <h1>
+        日記帳<br>
+        <span>今日の出来事を記録して、見返してみませんか？</span>
+      </h1>
+      <div class="menuBtn">
+        <p id="writeBook" v-on:click="writtingBook">
+          <span v-if="writeBtn === false">日記を書く</span>
+          <span v-else="writeBtn === true">閉じる</span>
+
+        </p>
+        <p id="seeBook" v-on:click="seeingBook">
+          <span v-if="seeBtn === false">日記を見る</span>
+          <span v-else="seeBtn === true">閉じる</span>
+        </p>
+      </div>
+    </div>
+    <div id="writting" v-if="writeBtn">
+      <p>書き込み</p>
+      <form>
+        <div class="form1">題名：<input　 class="title" type="text" name="text" placeholder="titile" v-model="addTitle"></div>
+        <input type="text" name="dummy" style="display: none;">
+        <div class="form1">
+          内容： <textarea id="futurediary" class="detail" cols="30" rows="10" placeholder="detail" v-model="addDetail"></textarea>
+        </div>
+      </form>
+
+      <div id="submitBtn" v-on:click="addItem">登録</div>
+    </div>
+    <div v-else></div>
+
+    <div id="toSee" v-if="seeBtn">
+      <ul class="liststyleNone">
+        <li class="thatday" v-for="(dairy,index) in dairy">
+          <span class="material-icons" v-on:click="deleteBtn">delete</span>
+          <p class="thatdayTitle">
+            {{dairy.title}}
+          </p>
+          <p class="thatdayDetail" >{{dairy.detail}}</p>
+          <p class="thatdayDate">登録日:{{dairy.registar}}</p>
+        </li>
+      </ul>
+    </div>
+    <div v-else></div>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
