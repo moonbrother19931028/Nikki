@@ -1,0 +1,179 @@
+body{
+  font-family:sans-serif;
+}
+
+.top{
+  margin:auto;
+}
+
+.top h1{
+  text-align:center;
+  font-size:60px;
+  text-shadow:2px 2px 4px #747474;
+}
+
+.top h1 span{
+  font-weight:normal;
+  font-size:15px;
+  text-shadow:none;
+}
+
+.menuBtn{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+#writeBook{
+  background:skyblue;
+  width:200px;
+  height:50px;
+  line-height:50px;
+  margin-right:10px;
+  text-align:center;
+  box-shadow:3px 3px 6px #7290ac;
+  cursor:pointer;
+  user-select: none;
+}
+#seeBook{
+  background:#f5f5a7;
+  width:200px;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  box-shadow:3px 3px 6px #9c9c6d;
+  cursor:pointer;
+  user-select: none;
+}
+
+#writting{
+  background:#baf7f7;
+  width:700px;
+  height:300px;
+  margin:0 auto;
+}
+
+#writting>p{
+ font-size:20px;
+ padding-left:80px;
+ padding-top:30px
+}
+
+#writting .form1{
+  display:flex;
+  margin-left:80px;
+}
+
+#writting .title{
+  height:20px;
+  width:500px;
+  margin-left:20px;
+  margin-bottom:10px;
+  padding:0;
+  display:block;
+}
+
+#writting .detail{
+  width:500px;
+  margin-left:20px;
+  padding:0;
+  display:block;
+}
+
+#submitBtn{
+  background:#2b4ff1;
+  color:#fff;
+  width:300px;
+  height:30px;
+  text-align:center;
+  cursor:pointer;
+  margin-top:5px;
+  margin-left:149px;
+  border-radius:4px;
+}
+
+#submitBtn:hover{
+  background:#4564eb;
+}
+
+#toSee{
+  /* background:#f5f5a7; */
+  width:800px;
+  min-height:900px;
+  margin: 30px auto;
+  position: relative;
+}
+
+#toSee>h2{
+  text-align:center;
+  padding-top:40px;
+  font-weight:normal;
+  font-size:30px;
+}
+
+#toSee .detail{
+  cursor:pointer;
+  user-select:none;
+}
+
+.keyopen{
+  color:blue;
+}
+
+.keyclose{
+  color:red;
+}
+
+
+.liststyleNone{
+  list-style:none;
+  padding:0;
+}
+
+.thatday{
+  width:700px;
+  min-height:120px;
+  background:pink;
+  margin:0 auto;
+}
+
+.thatdayTitle{
+  width:500px;
+  height:30px;
+  text-align:center;
+  color:#fff;
+  margin:10px auto;
+  border-bottom:2px solid #fff;
+  padding-top:40px;
+  padding-left:20px;
+  font-size:25px;
+  font-weight:bold;  
+}
+
+
+
+.thatdayDetail{
+  width:600px;
+  min-height:30px;
+  color:#fff;
+  margin:0 auto;
+  padding-top:10px;
+  font-size:20px;
+  text-decoration:underline;
+  border:2px solid #fff;
+  padding:0 3px 0 3px;
+}
+
+.thatdayDate{
+  color:#fff;
+  text-align:right;
+}
+
+.material-icons{
+  float:right;
+  margin-right:10px;
+  margin-top:10px;
+  color:#fff;
+  cursor:pointer;
+}
+
